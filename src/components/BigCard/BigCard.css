@@ -1,0 +1,76 @@
+.bigCard {
+  width: 100%;
+  background-color: var(--color-white);
+  padding: 0 10px 10px 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.bigCard .close {
+  margin: 5px 0;
+}
+.bigCard .close button {
+  /* padding: 10px; */
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  color: #6a6a6a;
+  font-size: 16px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-sidebar);
+  cursor: pointer;
+}
+.count-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-div {
+  display: flex;
+  align-items: flex-start;
+}
+.bigCard-details {
+  display: flex;
+  justify-content: space-between;
+}
+.bigCard-details img {
+  width: 100px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.bigCard-details .count {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.bigCard-details .count button {
+  background-color: transparent;
+  border: 1px solid var(--color-orange);
+  color: var(--color-orange);
+  padding: 0.2em 0.5em;
+  /* padding: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.bigCard-details .count h3 {
+  margin: 0 10px;
+}
+.hints {
+  margin-top: 5px;
+  padding: 0 2px;
+  border-radius: 5px;
+  background-color: var(--color-sidebar);
+}

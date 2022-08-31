@@ -1,0 +1,21 @@
+.caro-div {
+  height: 33vh;
+}
+.caro-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.swiper-rtl .swiper-button-next {
+    left: 100px !important;
+    right: auto ;
+    color: azure;
+    font-size: 15px;
+}
+.swiper-rtl .swiper-button-prev {
+    right: 100px !important;
+    left: auto;
+    color: azure;
+}

@@ -1,0 +1,6 @@
+.tax {
+  margin-right: 20px;
+}
+.tax ul li {
+  color: var(--color-text);
+}

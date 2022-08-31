@@ -1,0 +1,83 @@
+.section-product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-product-container {
+  padding: 2rem;
+}
+.section-product-container img {
+  width: 480px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.product-datails {
+  display: flex;
+  justify-content: space-between;
+}
+.product-datails h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-text);
+}
+.product-datails h4 {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--color-orange);
+}
+.textarea h4 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.textarea textarea {
+  width: 100%;
+  border: 1px solid var(--color-gray);
+  border-radius: 3px;
+}
+.btns-div {
+  display: flex;
+  justify-content: space-between;
+}
+.btns-div .count {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.btns-div .count button {
+  background-color: transparent;
+  border: 1px solid var(--color-orange);
+  color: var(--color-orange);
+  padding: 0.2em 0.5em;
+  /* padding: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btns-div .count h3 {
+  margin: 0 10px;
+}
+.btns-div .add {
+  padding: 2px 30px;
+  background-color: var(--color-orange);
+  border: none;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  font-size: 17px;
+  font-family: "Noto Sans Arabic", sans-serif;
+  cursor: pointer;
+}
+.btns-div .add svg {
+  margin-left: 5px;
+}
