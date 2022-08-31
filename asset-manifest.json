@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/menu-opia/static/css/main.e2b93831.css",
-    "main.js": "/menu-opia/static/js/main.18f64b07.js",
+    "main.js": "/menu-opia/static/js/main.9c48a7a0.js",
     "static/media/4.jpg": "/menu-opia/static/media/4.a793de0fef219b87c457.jpg",
     "static/media/cover2.png": "/menu-opia/static/media/cover2.4fb73b732bb72bde2c9b.png",
     "static/media/instagram.jpg": "/menu-opia/static/media/instagram.f5b875373119b7dfcfcd.jpg",
@@ -11,10 +11,10 @@
     "static/media/Snapchat.jpg": "/menu-opia/static/media/Snapchat.206d3cf857669a3217ea.jpg",
     "index.html": "/menu-opia/index.html",
     "main.e2b93831.css.map": "/menu-opia/static/css/main.e2b93831.css.map",
-    "main.18f64b07.js.map": "/menu-opia/static/js/main.18f64b07.js.map"
+    "main.9c48a7a0.js.map": "/menu-opia/static/js/main.9c48a7a0.js.map"
   },
   "entrypoints": [
     "static/css/main.e2b93831.css",
-    "static/js/main.18f64b07.js"
+    "static/js/main.9c48a7a0.js"
   ]
 }
