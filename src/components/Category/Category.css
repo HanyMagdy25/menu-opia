@@ -35,7 +35,8 @@
 .all-cats li{
     margin: 0 7px;
 }
-.all-cats li a{
+.all-cats li span{
     font-size: 15px;
     color: var(--color-gray);
+    cursor: pointer;
 }

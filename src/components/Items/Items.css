@@ -1,5 +1,13 @@
 .sec{
     width: 100%;
+    min-height: 180px;
+}
+.sec-spinner{
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cards{
     display: flex;

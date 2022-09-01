@@ -31,6 +31,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/menu-opia" element={<Home />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/cart" element={<Cart />} />
