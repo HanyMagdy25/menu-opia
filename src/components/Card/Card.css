@@ -39,3 +39,9 @@
 .card-details h4 svg{
     margin-left: 5px;
 }
+
+@media screen and (max-width:600px){
+    .card{
+        width: 100%;
+    }
+}

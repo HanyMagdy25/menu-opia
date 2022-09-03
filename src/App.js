@@ -12,6 +12,7 @@ import Feedback from "./pages/Feedback/Feedback";
 import Cart from "./pages/Cart/Cart";
 import { useEffect } from "react";
 import ScrollToTop from "react-scroll-to-top";
+import { CartProvider } from "react-use-cart";
 
 function ScrollToTopAfterChangePage() {
   const { pathname } = useLocation();
@@ -25,7 +26,9 @@ function ScrollToTopAfterChangePage() {
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <CartProvider>
+      <div className="App">
       <Router>
         <ScrollToTopAfterChangePage />
         <Header />
@@ -39,6 +42,10 @@ function App() {
         <ScrollToTop smooth />
       </Router>
     </div>
+    </CartProvider>
+    
+    </>
+    
   );
 }
 

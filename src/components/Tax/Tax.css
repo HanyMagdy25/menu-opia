@@ -4,3 +4,8 @@
 .tax ul li {
   color: var(--color-text);
 }
+@media screen and (max-width: 600px) {
+  .tax ul li {
+    font-size: 15px;
+  }
+}

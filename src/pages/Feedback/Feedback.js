@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import Back from "../../components/Back/Back";
 import Footer from "../../components/Footer/Footer";
 import "./Feedback.css";
 
@@ -14,7 +15,7 @@ export default function Feedback() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [text, setText] = useState("");
-  // Stars 
+  // Stars
   const [currentValue, setCurrentValue] = useState(0);
   const [hoverValue, setHoverValue] = useState(undefined);
   const stars = Array(5).fill(0);
@@ -30,11 +31,7 @@ export default function Feedback() {
 
   return (
     <section className="feedback-section">
-      <span>
-        <Link to="/">
-          <HiOutlineArrowNarrowRight /> الرجوع
-        </Link>
-      </span>
+      <Back path="/" />
       <div className="feedback-section-container">
         <h4>شكرا لكم</h4>
         <h1>كيف كانت تجربتك معنا؟</h1>

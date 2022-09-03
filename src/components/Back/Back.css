@@ -1,0 +1,14 @@
+.back{
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    font-size: 20px;
+  }
+  .back a{
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+  }
+   .back svg{
+    margin-left: 10px;
+  }

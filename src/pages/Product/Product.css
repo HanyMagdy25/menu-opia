@@ -82,3 +82,10 @@
 .btns-div .add svg {
   margin-left: 5px;
 }
+
+@media screen and (max-width: 600px) {
+  .section-product-container img {
+    width: 100%;
+    height: 300px;
+  }
+}
