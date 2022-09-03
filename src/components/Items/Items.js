@@ -2,9 +2,23 @@ import React, { useEffect, useState } from "react";
 // import { products } from "../../utils/data";
 // import { useDispatch, useSelector } from "react-redux";
 // import { getproducts } from "../../store/productSlice";
+import { motion } from "framer-motion";
 import Card from "../Card/Card";
 import "./Items.css";
 import Spinner from "../Spinner/Spinner";
+
+const scaleVariants = {
+  whileInView: {
+    // scale:[0,1],
+    x: [-50, 0],
+    opacity: [0, 1],
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
 export default function Items({ cats, catIdByMe }) {
   const [items, setItems] = useState(null);
   const [loading, setLoding] = useState(false);
@@ -36,9 +50,13 @@ export default function Items({ cats, catIdByMe }) {
           <section className="sec">
             <>
               <h3>فطور</h3>
-              <div className="cards">
+              <motion.div
+                variant={scaleVariants}
+                whileInView={scaleVariants.whileInView}
+                className="cards"
+              >
                 <Card item={items} />
-              </div>
+              </motion.div>
             </>
           </section>
         </>

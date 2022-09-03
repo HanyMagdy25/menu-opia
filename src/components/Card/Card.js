@@ -3,6 +3,9 @@ import "./Card.css";
 import { BiPurchaseTag } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
+// import { motion} from "framer-motion";
+
+
 export default function Card({ item }) {
   return (
     <>

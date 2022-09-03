@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import "./BigCard.css";
 export default function BigCard({item,updateItemQuantity,removeItem}) {
   // const [count, setCount] = useState(0);
-  console.log(item)
+  // console.log(item)
   return (
     <div className="bigCard">
       <div className="close">

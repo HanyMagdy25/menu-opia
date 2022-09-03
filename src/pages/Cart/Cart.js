@@ -5,13 +5,22 @@ import { useCart } from "react-use-cart";
 import BigCard from "../../components/BigCard/BigCard";
 import "./Cart.css";
 import Back from "../../components/Back/Back";
+
+// POST REQUEST
+// const order = 'https://camera.eaglefits.net/api.php?order'
+
 export default function Cart() {
   const [note, setNote] = useState("")
+
   useEffect(() => {
-    if(note !== ""){
+    if(note === ""){
+      localStorage.removeItem('note');
+    }else{
       localStorage.setItem('note', note);
     }
   }, [note])
+
+  console.log("note",note)
   
   const {
     isEmpty,
@@ -23,7 +32,26 @@ export default function Cart() {
     removeItem,
   } = useCart();
 
-  // if (isEmpty) return <p>Your cart is empty</p>;
+  // const handleOrder = () => {
+  //   const order = {};
+  //   fetch(`https://camera.eaglefits.net/api.php?order`, {
+  //     method: "POST",
+  //     credentials: "include",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(order),
+  //   })
+  //     .then((data) => data.json())
+  //     .then((res) => {
+  //       console.log(res);
+  //       if (res.status === "success") {
+  //         // 
+  //       }
+  //     });
+  // };
+
+
   return (
     <>
       {isEmpty ? (
@@ -48,9 +76,6 @@ export default function Cart() {
                 updateItemQuantity={updateItemQuantity}
               />
             ))}
-
-            {/* <BigCard /> */}
-            {/* <BigCard /> */}
           </div>
           <div className="note"> 
             <h4>ملاحظات :</h4>

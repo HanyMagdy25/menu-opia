@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-// import { products } from "../../utils/data";
-// import { useDispatch, useSelector } from "react-redux";
+import "./Product.css";
+import { useParams,useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import { BiPurchaseTag } from "react-icons/bi";
 import { GiBeachBag } from "react-icons/gi";
-import "./Product.css";
-// import { getOneProduct, getproducts } from "../../store/productSlice";
 import Spinner from "../../components/Spinner/Spinner";
 import { useCart } from "react-use-cart";
 
@@ -15,48 +11,20 @@ export default function Product() {
   const [count, setCount] = useState(1);
   const [loading, setLoding] = useState(false);
   const [product, setProduct] = useState([]);
-  // const [merged, setMerged] = useState([]);
-  // const [note, setNotes] = useState("");
-  const navigate = useNavigate()
-  // console.log(note);
-  console.log("00",product);
-  // const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
+  const { addItem } = useCart();
   const param = useParams();
-  const {addItem} = useCart();
-  // const hint = "تجربة ملاحاظات"
-  // const dispatch = useDispatch();
-  // const { isloading, products } = useSelector((state) => state.products);
+
   useEffect(() => {
-    // fetch(`https://camera.eaglefits.net/api.php?product=${param.id}`)
-    // لازم تزود االسعر
-    fetch(`http://localhost:8000/test/${param.id}`)
+    fetch(`https://camera.eaglefits.net/api.php?product=${param.id}`)
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         setProduct(data);
         setLoding(true);
-        
       });
-
-
-      
   }, [param.id]);
-  // console.log("merged", merged);
-  // console.log("param", param);
-  // const oneProductMap = products.map((pro, index) => pro.cards);
-
-  // const merged = [].concat.apply([], oneProductMap);
-
-  // const oneProduct = products.find((a) => a.id === param.id);
-  // console.log("oneProduct66", oneProduct);
-
-  // const handleCart = (data)=>{
-  //   setCart(cart.concat(data))
-  //   console.log("66",data)
-  // }
-
-  // console.log("cart",cart)
 
   return (
     <section className="section-product">
@@ -90,7 +58,13 @@ export default function Product() {
                     <h3>{count}</h3>
                     <button onClick={() => setCount(count + 1)}>+</button>
                   </div>
-                  <button className="add" onClick={()=>{addItem(product,count);navigate("/cart")}} >
+                  <button
+                    className="add"
+                    onClick={() => {
+                      addItem(product, count);
+                      navigate("/cart");
+                    }}
+                  >
                     <GiBeachBag /> اضافة للسلة
                   </button>
                 </div>
