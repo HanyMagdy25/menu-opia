@@ -42,19 +42,15 @@ export default function Product() {
                   <h3>{product.title}</h3>
 
                   <h4>
-                    <BiPurchaseTag /> 55 ريال
+                    <BiPurchaseTag /> {product.price * count} ريال
                   </h4>
                 </div>
                 <div>
                   <p>{product.paragraph}</p>
                 </div>
-                {/* <div className="textarea">
-                  <h4>إضافة ملاحظات:</h4>
-                  <textarea onChange={(e)=> setNotes(e.target.value)}/>
-                </div> */}
                 <div className="btns-div">
                   <div className="count">
-                    <button onClick={() => setCount(count - 1)}>-</button>
+                    <button disabled={count<2} onClick={() => setCount(count - 1)}>-</button>
                     <h3>{count}</h3>
                     <button onClick={() => setCount(count + 1)}>+</button>
                   </div>

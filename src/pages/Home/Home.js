@@ -19,8 +19,6 @@ export default function Home() {
         setCats(data);
       });
   }, []);
-  // console.log("cats", cats);
-  // console.log("setCatIdByMe", catIdByMe);
   return (
     <div className="home">
       <div className="carousel">

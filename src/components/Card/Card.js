@@ -19,7 +19,7 @@ export default function Card({ item }) {
               <div className="card-details">
                 <h5>{i.title}</h5>
                 <h6>{i.paragraph}</h6>
-                {/* <h4><BiPurchaseTag/> {i.price}</h4> */}
+                <h4><BiPurchaseTag/> {i.price}</h4>
               </div>
             </Link>
           ))}

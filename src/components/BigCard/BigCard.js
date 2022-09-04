@@ -24,7 +24,7 @@ export default function BigCard({item,updateItemQuantity,removeItem}) {
             <h3>{item.quantity}</h3>
             <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
           </div>
-          <div>25 ريال</div>
+          <div>{item.quantity * item.price}</div>
         </div>
       </div>
       {/* <div className="hints">
