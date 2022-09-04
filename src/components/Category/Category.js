@@ -2,6 +2,7 @@ import React from "react";
 import "./Category.css";
 import logo from "../../assets/white-logo.png";
 import Spinner from "../Spinner/Spinner";
+import { Link } from "react-router-dom";
 
 // const catsOld = [
 //   { path: "#sec1", title: "عصائر الصيف" },
@@ -15,7 +16,7 @@ import Spinner from "../Spinner/Spinner";
 //   { path: "#sec9", title: "المشروبات الباردة والمثلجة" },
 //   { path: "#sec10", title: "المشروبات الساخنة" },
 // ];
-export default function Category({ cats, setCatIdByMe }) {
+export default function Category({ cats }) {
   
   return (
     <div className="category">
@@ -33,7 +34,8 @@ export default function Category({ cats, setCatIdByMe }) {
           <ul className="all-cats">
             {cats?.map((cat, index) => (
               <li key={index}>
-                <span onClick={() => setCatIdByMe(cat.id)}>{cat.name}</span>
+                {/* <span onClick={() => setCatIdByMe(cat.id)}>{cat.name}</span> */}
+                <Link to={`/${cat.id}`}>{cat.name}</Link>
               </li>
             ))}
           </ul>

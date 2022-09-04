@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Card from "../Card/Card";
 import "./Items.css";
 import Spinner from "../Spinner/Spinner";
+import { useParams } from "react-router-dom";
 
 const scaleVariants = {
   whileInView: {
@@ -20,13 +21,14 @@ const scaleVariants = {
 };
 
 export default function Items({ cats, catIdByMe }) {
+  const param = useParams()
   const [items, setItems] = useState(null);
   const [loading, setLoding] = useState(false);
   // const { isloading, products } = useSelector((state) => state.products);
   // const dispatch = useDispatch();
   useEffect(() => {
     // dispatch(getproducts());
-    fetch(`https://camera.eaglefits.net/api.php?cat=${catIdByMe}`)
+    fetch(`https://camera.eaglefits.net/api.php?cat=${param.id ? param.id : 1}`)
       .then((res) => {
         return res.json();
       })
@@ -34,7 +36,7 @@ export default function Items({ cats, catIdByMe }) {
         setItems(data);
         setLoding(true);
       });
-  }, [catIdByMe]);
+  }, [catIdByMe, param.id]);
   // console.log("6items:", items);
 
   // console.log("products", products);

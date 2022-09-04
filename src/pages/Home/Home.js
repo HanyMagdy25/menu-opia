@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
   const [cats, setCats] = useState(null);
-  const [catIdByMe, setCatIdByMe] = useState(2);
+  // const [catIdByMe, setCatIdByMe] = useState(1);
 
   useEffect(() => {
     fetch("https://camera.eaglefits.net/api.php?cats")
@@ -25,8 +25,8 @@ export default function Home() {
         <Carousel />
       </div>
       <div className="home-container">
-        <Category cats={cats} setCatIdByMe={setCatIdByMe} />
-        <Items cats={cats} catIdByMe={catIdByMe} />
+        <Category cats={cats}  />
+        <Items cats={cats}  />
         <Tax />
       </div>
       <div className="footer">
