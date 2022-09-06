@@ -27,27 +27,25 @@ function ScrollToTopAfterChangePage() {
 function App() {
   return (
     <>
-    <CartProvider>
-      <div className="App">
-      <Router>
-        <ScrollToTopAfterChangePage />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu-opia" element={<Home />} />
-          <Route path="/menu-opia/:id" element={<Home />} />
-          <Route path="/:id" element={<Home />} />
-          <Route path="/product/:id" element={<Product />} />
-          <Route path="/feedback" element={<Feedback />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-        <ScrollToTop smooth />
-      </Router>
-    </div>
-    </CartProvider>
-    
+      <CartProvider>
+        <div className="App">
+          <Router>
+            <ScrollToTopAfterChangePage />
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/menu-opia" element={<Home />} />
+              <Route path="/menu-opia/:id" element={<Home />} />
+              <Route path="/:id" element={<Home />} />
+              <Route path="/product/:id" element={<Product />} />
+              <Route path="/feedback" element={<Feedback />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+            <ScrollToTop smooth />
+          </Router>
+        </div>
+      </CartProvider>
     </>
-    
   );
 }
 

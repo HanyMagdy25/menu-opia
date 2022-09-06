@@ -7,15 +7,14 @@
   object-fit: cover;
 }
 
-
 .swiper-rtl .swiper-button-next {
-    left: 100px !important;
-    right: auto ;
-    color: azure;
-    font-size: 15px;
+  left: 100px !important;
+  right: auto;
+  color: azure;
+  font-size: 15px;
 }
 .swiper-rtl .swiper-button-prev {
-    right: 100px !important;
-    left: auto;
-    color: azure;
+  right: 100px !important;
+  left: auto;
+  color: azure;
 }

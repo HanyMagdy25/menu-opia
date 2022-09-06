@@ -6,6 +6,8 @@ import { BiPurchaseTag } from "react-icons/bi";
 import { GiBeachBag } from "react-icons/gi";
 import Spinner from "../../components/Spinner/Spinner";
 import { useCart } from "react-use-cart";
+import ImageSpinner from "../../components/Spinner/ImageSpinner";
+import Back from "../../components/Back/Back";
 
 export default function Product() {
   const [count, setCount] = useState(1);
@@ -28,9 +30,10 @@ export default function Product() {
 
   return (
     <section className="section-product">
+      <Back path="/"/>
       {!loading ? (
         <>
-          <Spinner />
+          <ImageSpinner />
         </>
       ) : (
         <>

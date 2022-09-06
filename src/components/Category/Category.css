@@ -15,7 +15,7 @@
 }
 .category-top img {
   width: 84px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .category-top h4 {
   font-size: 15px;
@@ -45,6 +45,10 @@
   font-size: 15px;
   color: var(--color-gray);
   cursor: pointer;
+}
+.all-cats li .activeCat {
+  color: var(--color-orange);
+  border-bottom: 2px solid var(--color-orange);
 }
 
 @media screen and (max-width: 600px) {

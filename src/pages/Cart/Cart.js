@@ -51,6 +51,8 @@ export default function Cart() {
   //     });
   // };
 
+  // console.log("totalItems",totalItems)
+
 
   return (
     <>
@@ -64,6 +66,7 @@ export default function Cart() {
           </span>
         </div>
       ) : (
+        <>
         <section className="section-cart">
           <Back path="/"/>
 
@@ -89,6 +92,7 @@ export default function Cart() {
             <button className="add">اتمام الطلب</button>
           </div>
         </section>
+      </>
       )}
     </>
   );

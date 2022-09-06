@@ -25,3 +25,9 @@ h4 {
 a {
   text-decoration: none;
 }
+.scroll-to-top {
+  background-color: var(--color-orange) !important;
+}
+.scroll-to-top svg{
+  fill: var(--color-white) !important;
+}

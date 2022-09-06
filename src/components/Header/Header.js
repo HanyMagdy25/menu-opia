@@ -11,13 +11,18 @@ import instagram from "../../assets/instagram.jpg";
 import twitter from "../../assets/twitter.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useCart } from "react-use-cart";
 
 export default function Header() {
   const [toggle, settoggle] = useState(false);
+  const {
+    totalItems,
+    cartTotal,
+  } = useCart();
 
   const icons = [
-    { image: facebook, path: "/facebook" },
-    { image: snapchat, path: "/snapchat" },
+    { image: facebook, path: "/" },
+    { image: snapchat, path: "/" },
     { image: instagram, path: "/" },
     { image: twitter, path: "/" },
   ];
@@ -51,7 +56,7 @@ export default function Header() {
                   <img src={logo} alt="logo" />
                 </Link>
                 <div>
-                  <h4>اسم المطعم</h4>
+                  <h4>أوبيا</h4>
                   <h4 className="phone">
                     <span style={{ marginLeft: "3px", color: "#c77b41" }}>
                       <AiFillPhone />
@@ -91,9 +96,16 @@ export default function Header() {
                 onClick={() => settoggle((prev) => !prev)}
                 className="menu-body-second"
               >
-                <div>
+                <div className="menu-body-cart-total">
                   <h4>سلة التسوق</h4>
-                  <p>.....</p>
+                  {totalItems === 0 ? (
+                    <span>فارغة</span>
+                  ) : (
+                    <>
+                      <span>عدد المنتجات : {totalItems} ,</span>
+                      <span> الاجمالى : {cartTotal} ريال</span>
+                    </>
+                  )}
                 </div>
                 <div>
                   <span>
