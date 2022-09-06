@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/menu-opia/static/css/main.bac70800.css",
-    "main.js": "/menu-opia/static/js/main.83024717.js",
-    "static/media/cover2.png": "/menu-opia/static/media/cover2.4fb73b732bb72bde2c9b.png",
+    "main.css": "/menu-opia/static/css/main.b398218b.css",
+    "main.js": "/menu-opia/static/js/main.70db68ca.js",
     "static/media/instagram.jpg": "/menu-opia/static/media/instagram.f5b875373119b7dfcfcd.jpg",
-    "static/media/cover3.jpg": "/menu-opia/static/media/cover3.8c75363a25980ead4bad.jpg",
     "static/media/white-logo.png": "/menu-opia/static/media/white-logo.4c65c8b1b367fc58adc9.png",
-    "static/media/cover.jpeg": "/menu-opia/static/media/cover.5f3b579deaa5b8ef05d9.jpeg",
     "static/media/Snapchat.jpg": "/menu-opia/static/media/Snapchat.206d3cf857669a3217ea.jpg",
+    "static/media/cover5.jpg": "/menu-opia/static/media/cover5.f1b53fc1a132d9f6fd4e.jpg",
+    "static/media/cover7.jpg": "/menu-opia/static/media/cover7.b5ec951a32142924ae90.jpg",
+    "static/media/cover6.jpg": "/menu-opia/static/media/cover6.a676759016fd40dec225.jpg",
+    "static/media/cover1.jpg": "/menu-opia/static/media/cover1.5ae09c0c40ba92d12ae0.jpg",
+    "static/media/cover3.jpg": "/menu-opia/static/media/cover3.8b5541a4c913a90caa0c.jpg",
+    "static/media/cover4.jpg": "/menu-opia/static/media/cover4.82015303fd07351b979e.jpg",
+    "static/media/cover2.jpg": "/menu-opia/static/media/cover2.c8c16ff77cac492bb686.jpg",
     "index.html": "/menu-opia/index.html",
-    "main.bac70800.css.map": "/menu-opia/static/css/main.bac70800.css.map",
-    "main.83024717.js.map": "/menu-opia/static/js/main.83024717.js.map"
+    "main.b398218b.css.map": "/menu-opia/static/css/main.b398218b.css.map",
+    "main.70db68ca.js.map": "/menu-opia/static/js/main.70db68ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.bac70800.css",
-    "static/js/main.83024717.js"
+    "static/css/main.b398218b.css",
+    "static/js/main.70db68ca.js"
   ]
 }
