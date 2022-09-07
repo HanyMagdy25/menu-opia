@@ -56,7 +56,7 @@ export default function Header() {
                   <img src={logo} alt="logo" />
                 </Link>
                 <div>
-                  <h4>أوبيا</h4>
+                  <h4>Opia</h4>
                   <h4 className="phone">
                     <span style={{ marginLeft: "3px", color: "#c77b41" }}>
                       <AiFillPhone />

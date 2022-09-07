@@ -8,11 +8,13 @@ import Spinner from "../../components/Spinner/Spinner";
 import { useCart } from "react-use-cart";
 import ImageSpinner from "../../components/Spinner/ImageSpinner";
 import Back from "../../components/Back/Back";
+import Popup from "../../components/Popup/Popup";
 
 export default function Product() {
   const [count, setCount] = useState(1);
   const [loading, setLoding] = useState(false);
   const [product, setProduct] = useState([]);
+  const [popup, setPopup] = useState(false);
   const navigate = useNavigate();
   const { addItem } = useCart();
   const param = useParams();
@@ -39,6 +41,7 @@ export default function Product() {
         <>
           {product && (
             <>
+            
               <div className="section-product-container">
                 <img src={product.image} alt="product" />
                 <div className="product-datails">
@@ -61,7 +64,8 @@ export default function Product() {
                     className="add"
                     onClick={() => {
                       addItem(product, count);
-                      navigate("/cart");
+                      // navigate("/cart");
+                      setPopup(true)
                     }}
                   >
                     <GiBeachBag /> اضافة للسلة
@@ -69,6 +73,7 @@ export default function Product() {
                 </div>
               </div>
               <Footer />
+              {popup && <Popup setPopup={setPopup}/>}
             </>
           )}
         </>

@@ -28,6 +28,6 @@ a {
 .scroll-to-top {
   background-color: var(--color-orange) !important;
 }
-.scroll-to-top svg{
+.scroll-to-top svg {
   fill: var(--color-white) !important;
 }

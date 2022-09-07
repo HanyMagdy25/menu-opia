@@ -87,7 +87,7 @@ export default function Cart() {
           <div className="cart-details">
             <div className="total">
               <h4>الإجمالي</h4>
-              <h3>{cartTotal}ريال</h3>
+              <h3>{cartTotal} ريال</h3>
             </div>
             <button className="add">اتمام الطلب</button>
           </div>
