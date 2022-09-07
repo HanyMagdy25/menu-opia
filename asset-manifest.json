@@ -1,23 +1,20 @@
 {
   "files": {
-    "main.css": "/menu-opia/static/css/main.b398218b.css",
-    "main.js": "/menu-opia/static/js/main.70db68ca.js",
+    "main.css": "/menu-opia/static/css/main.ad659ed2.css",
+    "main.js": "/menu-opia/static/js/main.fd8d3f96.js",
+    "static/media/cover1.jpg": "/menu-opia/static/media/cover1.c3a2d8816629a1e9bef1.jpg",
+    "static/media/cover4.jpg": "/menu-opia/static/media/cover4.8e9f3655d5dea847d39c.jpg",
+    "static/media/cover2.jpg": "/menu-opia/static/media/cover2.d0d5974072b328601578.jpg",
     "static/media/instagram.jpg": "/menu-opia/static/media/instagram.f5b875373119b7dfcfcd.jpg",
     "static/media/white-logo.png": "/menu-opia/static/media/white-logo.4c65c8b1b367fc58adc9.png",
     "static/media/Snapchat.jpg": "/menu-opia/static/media/Snapchat.206d3cf857669a3217ea.jpg",
-    "static/media/cover5.jpg": "/menu-opia/static/media/cover5.f1b53fc1a132d9f6fd4e.jpg",
-    "static/media/cover7.jpg": "/menu-opia/static/media/cover7.b5ec951a32142924ae90.jpg",
-    "static/media/cover6.jpg": "/menu-opia/static/media/cover6.a676759016fd40dec225.jpg",
-    "static/media/cover1.jpg": "/menu-opia/static/media/cover1.5ae09c0c40ba92d12ae0.jpg",
-    "static/media/cover3.jpg": "/menu-opia/static/media/cover3.8b5541a4c913a90caa0c.jpg",
-    "static/media/cover4.jpg": "/menu-opia/static/media/cover4.82015303fd07351b979e.jpg",
-    "static/media/cover2.jpg": "/menu-opia/static/media/cover2.c8c16ff77cac492bb686.jpg",
+    "static/media/check.png": "/menu-opia/static/media/check.1f1cc67e43a9d1ec2b94.png",
     "index.html": "/menu-opia/index.html",
-    "main.b398218b.css.map": "/menu-opia/static/css/main.b398218b.css.map",
-    "main.70db68ca.js.map": "/menu-opia/static/js/main.70db68ca.js.map"
+    "main.ad659ed2.css.map": "/menu-opia/static/css/main.ad659ed2.css.map",
+    "main.fd8d3f96.js.map": "/menu-opia/static/js/main.fd8d3f96.js.map"
   },
   "entrypoints": [
-    "static/css/main.b398218b.css",
-    "static/js/main.70db68ca.js"
+    "static/css/main.ad659ed2.css",
+    "static/js/main.fd8d3f96.js"
   ]
 }
