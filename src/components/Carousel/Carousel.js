@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
 
-const imagesCarousel = [cover1, cover2, cover4];
+const imagesCarousel = [cover4, cover2, cover1];
 
 export default function Carousel() {
   return (
