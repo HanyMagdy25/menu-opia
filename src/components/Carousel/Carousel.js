@@ -17,7 +17,7 @@ export default function Carousel() {
     <>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         {imagesCarousel.map((car, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div className="caro-div">
               <img src={car} alt="cover" />
             </div>

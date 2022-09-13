@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { AiOutlineClose, AiFillPhone } from "react-icons/ai";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { BsGlobe } from "react-icons/bs";
+import { BsGlobe, BsCart4 } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import logo from "../../assets/white-logo.png";
 import facebook from "../../assets/facebook.png";
@@ -15,10 +15,17 @@ import { useCart } from "react-use-cart";
 
 export default function Header() {
   const [toggle, settoggle] = useState(false);
-  const {
-    totalItems,
-    cartTotal,
-  } = useCart();
+  const { totalItems, cartTotal, isEmpty } = useCart();
+
+  // const {
+  //   isEmpty,
+  //   // totalUniqueItems,
+  //   items,
+  //   // totalItems,
+  //   cartTotal,
+  //   updateItemQuantity,
+  //   removeItem,
+  // } = useCart();
 
   const icons = [
     { image: facebook, path: "/" },
@@ -35,6 +42,16 @@ export default function Header() {
         <span className="menu-icon" onClick={() => settoggle((prev) => !prev)}>
           <FiMenu />
         </span>
+        {!isEmpty && (
+          <Link to="/cart"
+            className="menu-cart"
+            // onClick={() => settoggle((prev) => !prev)}
+          >
+            <span className="menu-cart-number">{totalItems}</span>
+            <BsCart4 />
+          </Link>
+        )}
+
         {toggle && (
           <motion.div
             whileInView={{ x: [380, 0] }}

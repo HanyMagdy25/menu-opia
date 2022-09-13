@@ -18,9 +18,9 @@ header {
   position: absolute;
   left: 0;
 }
-.header-container .menu-icon {
-  /* position: absolute;
-    right: 0; */
+.header-container .menu-icon ,
+.header-container .menu-lang,
+.header-container .menu-cart{
   position: fixed;
   padding: 0.5rem 0.75rem;
   font-size: 1.3rem;
@@ -28,29 +28,28 @@ header {
   background-color: #2a26264d;
   border: none;
   color: var(--color-white);
-  top: 15px;
-  right: 15px;
   display: block;
   border-radius: 5px;
   cursor: pointer;
   z-index: 99;
 }
+.header-container .menu-icon {
+  top: 15px;
+  right: 15px;
+}
 .header-container .menu-lang {
-  /* position: absolute;
-    right: 0; */
-  position: fixed;
-  padding: 0.5rem 0.75rem;
-  font-size: 1.3rem;
-  line-height: 1;
-  background-color: #2a26264d;
-  border: none;
-  color: var(--color-white);
   top: 15px;
   left: 15px;
-  display: block;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 99;
+}
+.header-container .menu-cart {
+  bottom: 15px;
+  left: 15px;
+}
+.header-container .menu-cart .menu-cart-number {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 15px;
 }
 
 .sideBar {

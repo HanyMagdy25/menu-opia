@@ -5,12 +5,17 @@ import { useCart } from "react-use-cart";
 import BigCard from "../../components/BigCard/BigCard";
 import "./Cart.css";
 import Back from "../../components/Back/Back";
+import Order from "../../components/Order/Order";
 
 // POST REQUEST
 // const order = 'https://camera.eaglefits.net/api.php?order'
 
 export default function Cart() {
-  const [note, setNote] = useState("")
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [tableNumber, setTableNumber] = useState(null);
+  const [note, setNote] = useState("");
+  const [popupOrder, setPopupOrder] = useState(false);
 
   useEffect(() => {
     if(note === ""){
@@ -20,7 +25,7 @@ export default function Cart() {
     }
   }, [note])
 
-  console.log("note",note)
+  console.log("name",name)
   
   const {
     isEmpty,
@@ -89,9 +94,10 @@ export default function Cart() {
               <h4>الإجمالي</h4>
               <h3>{cartTotal} ريال</h3>
             </div>
-            <button className="add">اتمام الطلب</button>
+            <button onClick={()=>setPopupOrder(true)} className="add">اتمام الطلب</button>
           </div>
         </section>
+        {popupOrder && <Order setPopupOrder={setPopupOrder} setTableNumber={setTableNumber} setPhone={setPhone} setName={setName} />}
       </>
       )}
     </>

@@ -27,7 +27,7 @@ export default function Category({ cats, setResult, result }) {
           <img src={logo} alt="logo" />
           <h3>Opia</h3>
         </div>
-        <h4><Link to="/feedback">للطاولات</Link></h4>
+        <h4><Link to="/feedback">الاقتراحات</Link></h4>
       </div>
       <div className="category-bottom">
         {!cats ? (

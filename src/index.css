@@ -31,3 +31,6 @@ a {
 .scroll-to-top svg {
   fill: var(--color-white) !important;
 }
+button{
+  font-family: "Noto Sans Arabic", sans-serif;
+}
