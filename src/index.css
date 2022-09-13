@@ -27,6 +27,8 @@ a {
 }
 .scroll-to-top {
   background-color: var(--color-orange) !important;
+  bottom: 15px !important;
+  right: 15px !important;
 }
 .scroll-to-top svg {
   fill: var(--color-white) !important;
@@ -34,3 +36,4 @@ a {
 button{
   font-family: "Noto Sans Arabic", sans-serif;
 }
+
