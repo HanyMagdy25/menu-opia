@@ -30,23 +30,25 @@ export default function Cart() {
     cartTotal,
     updateItemQuantity,
     removeItem,
+    emptyCart,
   } = useCart();
 
   const handleOrder = () => {
     const order = {name,phone,tableNumber};
+    const cart = items;
     fetch(`http://opia.softwarecloud2.com/api/orders/store`, {
       method: "POST",
       credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(order),
+      body: JSON.stringify(order,cart),
     })
       .then((data) => data.json())
       .then((res) => {
-        console.log("res",res);
         if (res.status === "success") {
-          setPopupOrder(false)
+          setPopupOrder(false);
+          emptyCart()
         }
       });
   };

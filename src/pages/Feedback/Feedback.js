@@ -15,6 +15,7 @@ export default function Feedback() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [text, setText] = useState("");
+  const [done, setDone] = useState(false);
   // Stars
   const [currentValue, setCurrentValue] = useState(0);
   const [hoverValue, setHoverValue] = useState(undefined);
@@ -27,6 +28,30 @@ export default function Feedback() {
   };
   const handleMouseLeave = () => {
     setHoverValue(undefined);
+  };
+
+  const handleRate = () => {
+    const rate = {name,phone,text,currentValue};
+    fetch(`http://opia.url`, {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(rate),
+    })
+      .then((data) => data.json())
+      .then((res) => {
+        if (res.status === "success") {
+          // setPopupOrder(false);
+          // emptyCart()
+          setName("")
+          setText("")
+          setPhone("")
+          setCurrentValue(0)
+          setDone(true)
+        }
+      });
   };
 
   return (
@@ -72,7 +97,8 @@ export default function Feedback() {
           onChange={(e) => setText(e.target.value)}
           placeholder="اكتب تعليق"
         />
-        <button type="button">ارسال</button>
+        <button type="button" onClick={handleRate}>ارسال</button>
+        {done &&  <p>تم ارسال التقييم</p>}
       </div>
       <Footer />
     </section>

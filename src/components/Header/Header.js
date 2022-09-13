@@ -37,7 +37,10 @@ export default function Header() {
     <header>
       <div className="header-container">
         <span className="menu-lang">
-          <BsGlobe />
+          <BsGlobe /> En
+        </span>
+        <span className="menu-lang-arab">
+          <BsGlobe />ع 
         </span>
         <span className="menu-icon" onClick={() => settoggle((prev) => !prev)}>
           <FiMenu />

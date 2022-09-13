@@ -17,9 +17,22 @@ header {
 .header-container .menu-lang {
   position: absolute;
   left: 0;
+  display: flex;
 }
+.header-container .menu-lang-arab {
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  display: flex;
+}
+.header-container .menu-lang svg ,
+.header-container .menu-lang-arab svg {
+  margin-left: 5px;
+}
+
 .header-container .menu-icon ,
 .header-container .menu-lang,
+.header-container .menu-lang-arab,
 .header-container .menu-cart{
   position: fixed;
   padding: 0.5rem 0.75rem;
@@ -32,6 +45,7 @@ header {
   border-radius: 5px;
   cursor: pointer;
   z-index: 99;
+  display: flex;
 }
 .header-container .menu-icon {
   top: 15px;
