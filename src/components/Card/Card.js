@@ -14,12 +14,12 @@ export default function Card({ item }) {
         <>
           {item?.map((i, index) => (
             <Link to={`/product/${i.id}`} key={index} className="card">
-              <motion.img src={i.image} alt="product" />
+              <motion.img src={'/storage/' + i.image} alt="product" />
               <motion.div className="card-details">
-                <h5>{i.title}</h5>
-                <h6>{i.paragraph}</h6>
+                <h5>{i.name}</h5>
+                <h6>{i.description}</h6>
                 <h4>
-                  <BiPurchaseTag /> {i.price}
+                  <BiPurchaseTag /> {i.price} ريال
                 </h4>
               </motion.div>
             </Link>

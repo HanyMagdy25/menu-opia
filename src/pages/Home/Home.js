@@ -13,7 +13,7 @@ export default function Home() {
   const [result, setResult] = useState({});
 
   useEffect(() => {
-    fetch("https://camera.eaglefits.net/api.php?cats")
+    fetch("http://opia.softwarecloud2.com/api/categories")
       .then((res) => {
         return res.json();
       })
@@ -22,7 +22,6 @@ export default function Home() {
         setLoading(true);
       });
   }, []);
-  console.log("cats from Home",cats)
   return !loading ? (
     <>
       <ImageSpinner />

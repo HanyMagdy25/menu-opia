@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Order.css";
 import { AiOutlineClose } from "react-icons/ai";
 
-const Order = ({setPopupOrder,setPhone,setTableNumber,setName}) => {
+const Order = ({handleOrder,setPopupOrder,setPhone,setTableNumber,setName}) => {
   const [toggle, setToggle] = useState(1);
   return (
     <div className="popup">
@@ -32,7 +32,7 @@ const Order = ({setPopupOrder,setPhone,setTableNumber,setName}) => {
           >
             <input onChange={(e)=>setName(e.target.value)} placeholder="الإسم" />
             <input onChange={(e)=>setPhone(e.target.value)} placeholder="الجوال" />
-            <button>إرسال</button>
+            <button onClick={handleOrder}>إرسال</button>
           </div>
           <div
             className={
@@ -43,7 +43,7 @@ const Order = ({setPopupOrder,setPhone,setTableNumber,setName}) => {
           >
             <h4>قم يإدخال رقم الطاولة</h4>
             <input onChange={(e)=>setTableNumber(e.target.value)} type="number" placeholder="e.g:12" />
-            <button>إرسال</button>
+            <button onClick={handleOrder}>إرسال</button>
           </div>
         </div>
       </div>

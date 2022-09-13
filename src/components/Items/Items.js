@@ -11,7 +11,7 @@ export default function Items({ cats, catIdByMe, result }) {
   const [loading, setLoding] = useState(false);
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   useEffect(() => {
-    fetch(`https://camera.eaglefits.net/api.php?cat=${param.id ? param.id : 1}`)
+    fetch(`http://opia.softwarecloud2.com/api/products/category/${param.id ? param.id : cats[0]?.id}`)
       .then((res) => {
         return res.json();
       })
@@ -23,7 +23,7 @@ export default function Items({ cats, catIdByMe, result }) {
           setAnimateCard([{ y: 0, opacity: 1 }]);
         }, 400);
       });
-  }, [catIdByMe, param.id]);
+  }, [catIdByMe, cats, param.id]);
   return (
     <>
       {!loading && !items ? (

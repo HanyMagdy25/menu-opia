@@ -7,9 +7,6 @@ import "./Cart.css";
 import Back from "../../components/Back/Back";
 import Order from "../../components/Order/Order";
 
-// POST REQUEST
-// const order = 'https://camera.eaglefits.net/api.php?order'
-
 export default function Cart() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -24,9 +21,7 @@ export default function Cart() {
       localStorage.setItem('note', note);
     }
   }, [note])
-
-  console.log("name",name)
-  
+ 
   const {
     isEmpty,
     // totalUniqueItems,
@@ -37,27 +32,24 @@ export default function Cart() {
     removeItem,
   } = useCart();
 
-  // const handleOrder = () => {
-  //   const order = {};
-  //   fetch(`https://camera.eaglefits.net/api.php?order`, {
-  //     method: "POST",
-  //     credentials: "include",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(order),
-  //   })
-  //     .then((data) => data.json())
-  //     .then((res) => {
-  //       console.log(res);
-  //       if (res.status === "success") {
-  //         // 
-  //       }
-  //     });
-  // };
-
-  // console.log("totalItems",totalItems)
-
+  const handleOrder = () => {
+    const order = {name,phone,tableNumber};
+    fetch(`http://opia.softwarecloud2.com/api/orders/store`, {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(order),
+    })
+      .then((data) => data.json())
+      .then((res) => {
+        console.log("res",res);
+        if (res.status === "success") {
+          setPopupOrder(false)
+        }
+      });
+  };
 
   return (
     <>
@@ -97,7 +89,7 @@ export default function Cart() {
             <button onClick={()=>setPopupOrder(true)} className="add">اتمام الطلب</button>
           </div>
         </section>
-        {popupOrder && <Order setPopupOrder={setPopupOrder} setTableNumber={setTableNumber} setPhone={setPhone} setName={setName} />}
+        {popupOrder && <Order handleOrder={handleOrder} setPopupOrder={setPopupOrder} setTableNumber={setTableNumber} setPhone={setPhone} setName={setName} />}
       </>
       )}
     </>

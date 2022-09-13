@@ -16,8 +16,6 @@ export default function Category({ cats, setResult, result }) {
       setResult(cats.find((c) => c.id === parseInt(param.id)));
       setActiveCat(parseInt(param.id));
     }
-
-    console.log("result from cat", result);
   }, [cats, param, result, setResult]);
 
   return (

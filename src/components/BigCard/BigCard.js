@@ -3,8 +3,6 @@ import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import "./BigCard.css";
 export default function BigCard({item,updateItemQuantity,removeItem}) {
-  // const [count, setCount] = useState(0);
-  // console.log(item)
   return (
     <div className="bigCard">
       <div className="close">
@@ -14,8 +12,8 @@ export default function BigCard({item,updateItemQuantity,removeItem}) {
       </div>
       <div className="bigCard-details">
         <div className="details-div">
-          <img src={item.image} alt="bigCard" />
-          <span>{item.title}</span>
+          <img src={'/storage/' + item.image} alt="bigCard" />
+          <span>{item.name}</span>
         </div>
         <div className="count-parent">
           <div className="count">
@@ -24,12 +22,9 @@ export default function BigCard({item,updateItemQuantity,removeItem}) {
             <h3>{item.quantity}</h3>
             <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
           </div>
-          <div>{item.quantity * item.price}</div>
+          <div>{item.quantity * item.price} ريال</div>
         </div>
       </div>
-      {/* <div className="hints">
-        <p>الملاحظات: بدون فواكة</p>
-      </div> */}
     </div>
   );
 }
